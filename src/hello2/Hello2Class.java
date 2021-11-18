@@ -10,14 +10,13 @@ public class Hello2Class {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		
+		// 사귈 수 있는 확률높은 고백 횟수 array
 		int[] odds = new int[5];        // size는 발생시킬 난수의 개수
 		Random rd = new Random();
 		 
 		for(int r=0;r<5;r++) {
 		    odds[r] = rd.nextInt(100)+1; //1 ~ 100까지의 무작위 정수 한 개 발생
 		}
-		
-		// 사귈 수 있는 확률높은 고백 횟수
 		
 		// 시도 횟수
 		int tr;
