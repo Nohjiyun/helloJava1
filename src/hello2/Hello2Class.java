@@ -1,5 +1,6 @@
 package hello2;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Hello2Class {
 
@@ -9,30 +10,28 @@ public class Hello2Class {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		
+		int[] odds = new int[5];        // size는 발생시킬 난수의 개수
+		Random rd = new Random();
+		 
+		for(int r=0;r<5;r++) {
+		    odds[r] = rd.nextInt(100)+1; //1 ~ 100까지의 무작위 정수 한 개 발생
+		}
+		
 		// 사귈 수 있는 확률높은 고백 횟수
-		//1번 후보는 2번
-		//2번 후보는 3번
-		//3번 후보는 1번
-		//4번 후보는 5번
-		//5번 후보는 10번
 		
 		// 시도 횟수
 		int tr;
 		System.out.println();
 		System.out.println("================================");
-		System.out.print("고백 시도횟수를 입력해주세요(0 이상의 수): ");
+		System.out.print("고백 시도횟수를 입력해주세요(0과 100사이의 수 입력)>> ");
 		tr = sc.nextInt();
 		
 		// 조건문
-		while(tr<0) {
+		while(tr<=0) {
 			System.out.print("시도횟수를 입력해주세요(0이상의 수): "); 
 			tr = sc.nextInt();
 		}
 		
-		
-		int [] odds = {2,3,1,5,10};
-		
-		// 
 		int man_num = 0;
 		
 		for(int i=0;i<odds.length;i++) {
@@ -59,6 +58,7 @@ public class Hello2Class {
 
 			if(tr==0) break;
 		}
+		for(int k=0;k<odds.length;k++) System.out.println((k+1)+"고백 성공 예측 횟수 :"+odds[k]);
 		System.out.println();
 		System.out.println("프로그램 종료");
 	}
