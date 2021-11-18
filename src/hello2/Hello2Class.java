@@ -4,107 +4,63 @@ import java.util.Scanner;
 public class Hello2Class {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		int st;
-		int a;
-//		int classa;
 		
-		/*¾È³çÇÏ¼¼¿ä
-		Àú´Â ´©±¸ ÀÔ´Ï´Ù
-		ÀßºÎÅ¹ÇÕ´Ï´Ù*/
-		
-		// ¹®ÀÚ¿­ º¯¼ö ¼±¾ğ
-		String b = "Äí·Î¹Ì";
-		String c = "¸¶ÀÌ¸á·Îµğ";
-		a = 10;
-		
-		System.out.println("¾È³çÇÏ¼¼¿ä");
-		System.out.println("Àú´Â"+b+"ÀÔ´Ï´Ù");
-		System.out.println("Àß ºÎÅ¹ÇÕ´Ï´Ù");
-		System.out.println(b+"ÀÇ Ä£±¸´Â"+c+"ÀÔ´Ï´Ù");
-		System.out.print(c+"¿Í Àú´Â");System.out.print(a);System.out.print("»ì ÀÔ´Ï´Ù");
-
-		/*
-		// ¹®ÀÚ¿­ º¯¼ö ¼±¾ğ
-		int tr = 0;
 		
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		
-		//½Ãµµ È½¼ö
-		System.out.print("½ÃµµÈ½¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À");
-		tr = sc.nextInt();
+		// ì‚¬ê·ˆ ìˆ˜ ìˆëŠ” í™•ë¥ ë†’ì€ ê³ ë°± íšŸìˆ˜
+		//1ë²ˆ í›„ë³´ëŠ” 2ë²ˆ
+		//2ë²ˆ í›„ë³´ëŠ” 3ë²ˆ
+		//3ë²ˆ í›„ë³´ëŠ” 1ë²ˆ
+		//4ë²ˆ í›„ë³´ëŠ” 5ë²ˆ
+		//5ë²ˆ í›„ë³´ëŠ” 10ë²ˆ
 		
-		
-		System.out.println(b+"¿¡°Ô"+c+"´Â °í¹éÀ»"+tr+"¹ø ½ÃµµÇÏ¿´½À´Ï´Ù");
-		System.out.println("---------------------------------------");
-		
-		System.out.println("1¹ø ½Ãµµ¿¡ "+1+"È¸ Â÷¿´½À´Ï´Ù");
-		System.out.println("½½ÆÛÁ³½À´Ï´Ù");
-		System.out.print("³²Àº ½Ãµµ È½¼ö´Â?");
-		tr -= 1;
-		System.out.println(tr);
-		System.out.println();
-				
-		System.out.println("2¹ø ½Ãµµ¿¡ "+1+"È¸ Â÷¿´½À´Ï´Ù");
-		System.out.println("½½ÆÛÁ³½À´Ï´Ù");
-		System.out.print("³²Àº ½Ãµµ È½¼ö´Â?");
-		tr -= 1;
-		System.out.println(tr);
-		System.out.println();
-		
-		int try_count = 10;
-				
-		for(int i = 0; i<try_count;i++) {
-			System.out.println(i+"¹ø ½Ãµµ¿¡"+(i+1)+"È¸ Â÷¿´½À´Ï´Ù");
-			// ¸¸¾à¿¡ 10¹ø Â÷¿´À¸¸é
-			if(i==9) {
-				System.out.println("±×³à¿Í ³¡³µ½À´Ï´Ù");}
-			// ¸¸¾à¿¡  10¹øÀÌ ¾Æ´Ï¸é
-			else {
-				System.out.println("±âÈ¸°¡"+(try_count-(i+1)+"¹ø ³²¾Ò½À´Ï´Ù"));
-			}
-		} */
-		
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
-		
-		// »ç±Ğ ¼ö ÀÖ´Â È®·ü³ôÀº °í¹é È½¼ö
-		//1¹ø ÈÄº¸´Â 2¹ø
-		//2¹ø ÈÄº¸´Â 3¹ø
-		//3¹ø ÈÄº¸´Â 1¹ø
-		//4¹ø ÈÄº¸´Â 5¹ø
-		//5¹ø ÈÄº¸´Â 10¹ø
-		
-		// ½Ãµµ È½¼ö
+		// ì‹œë„ íšŸìˆ˜
 		int tr;
 		System.out.println();
 		System.out.println("================================");
-		System.out.print("½ÃµµÈ½¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä(0ÀÌ»óÀÇ ¼ö): ");
+		System.out.print("ê³ ë°± ì‹œë„íšŸìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”(0 ì´ìƒì˜ ìˆ˜): ");
 		tr = sc.nextInt();
+		
+		// ì¡°ê±´ë¬¸
+		while(tr<0) {
+			System.out.print("ì‹œë„íšŸìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”(0ì´ìƒì˜ ìˆ˜): "); 
+			tr = sc.nextInt();
+		}
+		
 		
 		int [] odds = {2,3,1,5,10};
 		
+		// 
 		int man_num = 0;
 		
-		while(true) {
-			for(int i=1;i<=odds[man_num];i++) {
-				System.out.println(man_num+1+"¹ø ÈÄº¸´Â"+i+"È¸ °í¹éÀ» ½ÃµµÇß´Ù");
-				//if °í¹é È®·üÀÌ ³ôÀ» ¶§ °í¹éÇÏ¸é
-				if(i==odds[man_num]) {
-					System.out.println("¸ğ¼Ö Å»Ãâ");
-					tr = tr-1;
+		for(int i=0;i<odds.length;i++) {
+			for(int j=1;j<=tr;j++) {
+				System.out.println(man_num+1+"ë²ˆ í›„ë³´ëŠ” "+j+"íšŒ ê³ ë°±ì„ ì‹œë„í–ˆë‹¤");
+				
+				
+				//if ê³ ë°± í™•ë¥ ì´ ë†’ì„ ë•Œ ê³ ë°±í•˜ë©´
+				if(i==odds[man_num]) {		
+					System.out.println("ëª¨ì†” íƒˆì¶œ");
+					System.out.println();
+					System.out.println("==> ê·¸ ìœ„ì¹˜ì—ì„œ ë‚˜ë¦„ëŒ€ë¡œ í–‰ë³µí•˜ì„¸ìš”  <==");
+					System.out.println();
+					tr -= 1;
+					break;
 				}else {
-					System.out.println("¼Ö·ÎÀÔ´Ï´Ù");
+					System.out.println("ì†”ë¡œì…ë‹ˆë‹¤");
 				}
+				
+				System.out.println();
 			}
-			man_num++; //´ÙÀ½ ¼Ö·Î~
-			System.out.print("³²Àº È½¼ö´Â?");
-			System.out.println(tr);
 			
+			man_num++; //ë‹¤ìŒ ì†”ë¡œ~
+
 			if(tr==0) break;
 		}
-		System.out.println("°í¹é¼º°ø");
+		System.out.println();
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	}
 
 }
